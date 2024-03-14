@@ -10,3 +10,27 @@ library(texreg)
 library(dplyr)
 library(caret)
 library(tidyverse)
+
+#######################################
+#              !!!AFRICA!!!           #
+#######################################
+
+DataGlobal <- read_excel("Panel_Africa.xlsx")
+
+column_names <- names(DataGlobal)
+print(column_names) 
+
+# Remove column with missed variables
+df <- subset(DataGlobal, select = - GlobalPeaceIndex)
+
+# Replace spaces with underscores
+df <- df %>%
+  rename_all(~gsub(" ", "_", .))
+
+#preprocess_options <- preProcess(df, method = c("center", "scale"))
+#df <- predict(preprocess_options, df)
+
+#y's dynamics by year across countries on different grafs
+coplot(Hungry ~ Year|Country_Name, type="l", data=df)
+coplot(Hungry ~ Year|Country_Name, type="b", data=df)
+
