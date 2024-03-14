@@ -85,3 +85,15 @@ pcdtest(random, test=c("cd"))
 pcdtest(fixed, test=c("lm"))
 pcdtest(fixed, test=c("cd"))
 
+#Testing for serial correlation
+pbgtest(fixed)
+pbgtest(fixed.time)
+pbgtest(random)
+
+#Heteroskedastisity
+bptest(Hungry ~ Export+Gini_coef+Import+TertierySchool+School+SecondarySchool+factor(Country_Name), data=df, studentize=F)
+
+# Define the model formula
+model_formula <- Hungry ~ Export + Gini_coef + Import + 
+  TertierySchool + School + SecondarySchool + lag(Hungry, 1) + lag(Export, 1) + lag(Import, 1) + lag(Gini_coef, 1) + lag(School, 1) + lag(SecondarySchool, 1) + lag(TertierySchool, 1)
+
