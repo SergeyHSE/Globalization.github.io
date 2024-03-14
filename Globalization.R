@@ -69,3 +69,19 @@ write.csv(tidy(fixed.time), "fixed_time.csv")
 pFtest(fixed.time, fixed)
 plmtest(fixed, c("time"), type=("bp"))
 
+#Pool
+pool <- plm(Hungry ~ Export+Gini_coef+Import+TertierySchool+School+SecondarySchool,
+            data=df, index=c("Country_Name", "Year"), model="pooling")
+summary(pool)
+pFtest(fixed, pool)
+# Breusch-Pagan Lagrange Multiplier for random effects. Null is no panel effect (i.e. OLS better)
+plmtest(pool, type=c("bp"))
+
+
+#Testing for cross-sectional dependence/contemporaneous correlation: using Breusch-Pagan LM test of independence and Pasaran CD test
+pcdtest(random, test=c("lm"))
+pcdtest(random, test=c("cd"))
+
+pcdtest(fixed, test=c("lm"))
+pcdtest(fixed, test=c("cd"))
+
