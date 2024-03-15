@@ -117,3 +117,20 @@ coefficients_table <- as.data.frame(coef(result_summary))
 r_squared <- result_summary$rsquared
 coefficients_table
 
+###################################################################
+#                      ASIA                                       #
+###################################################################
+
+DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_Asia.xlsx")
+
+# Remove column with missed variables
+df <- subset(DataGlobal, select = - GlobalPeaceIndex)
+
+# Replace spaces with underscores
+
+df <- df %>%
+  rename_all(~gsub(" ", "_", .))
+
+preprocess_options <- preProcess(df, method = c("center", "scale"))
+df <- predict(preprocess_options, df)
+
