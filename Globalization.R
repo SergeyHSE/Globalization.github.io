@@ -147,3 +147,20 @@ plotmeans(Hungry ~ Country_Name, main="Heterogeineity across branches", data=df)
 #heterogeneity across years
 plotmeans(Hungry~Year, main="Heterogeineity across months", data=df)
 
+#FE
+fixed <- plm(Hungry ~ Export+Gini_coef+Import+TertierySchool+School+SecondarySchool, data=df, index=c("Country_Name", "Year"), model="within")
+summary(fixed)
+write.csv(tidy(fixed) , "fixed.csv" )
+# Display the fixed effects (constants for each country)
+fixef(fixed)
+
+#RE ("swar")
+random <- plm(Hungry ~ Export+Gini_coef+Import+TertierySchool+School+SecondarySchool,
+              data=df, index=c("Country_Name", "Year"), model = "random", random.method = "walhus")
+summary(random)
+write.csv(tidy(random), "random.csv")
+
+
+#Choice between RE and FE (Hausman test)
+phtest(fixed, random)
+
