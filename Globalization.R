@@ -181,3 +181,17 @@ pFtest(fixed, pool)
 # Breusch-Pagan Lagrange Multiplier for random effects. Null is no panel effect (i.e. OLS better)
 plmtest(pool, type=c("bp"))
 
+#Testing for cross-sectional dependence/contemporaneous correlation: using Breusch-Pagan LM test of independence and Pasaran CD test
+pcdtest(fixed, test=c("lm"))
+pcdtest(fixed, test=c("cd"))
+
+#Testing for serial correlation
+pbgtest(fixed)
+
+#Heteroskedastisity
+bptest(Hungry ~ Export+Gini_coef+Import+TertierySchool+School+SecondarySchool+factor(Country_Name), data=df, studentize=F)
+
+# Define the model formula
+model_formula <- Hungry ~ Export + Gini_coef + Import + 
+  TertierySchool + School + SecondarySchool + lag(Hungry, 1) + lag(Export, 1) + lag(Import, 1) + lag(Gini_coef, 1) + lag(School, 1) + lag(SecondarySchool, 1) + lag(TertierySchool, 1)
+
