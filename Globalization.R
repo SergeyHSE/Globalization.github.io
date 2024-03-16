@@ -121,7 +121,7 @@ coefficients_table
 #                      ASIA                                       #
 ###################################################################
 
-DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_Asia.xlsx")
+DataGlobal <- read_excel("Panel_Asia.xlsx")
 
 # Remove column with missed variables
 df <- subset(DataGlobal, select = - GlobalPeaceIndex)
@@ -214,3 +214,12 @@ coefficients_table <- as.data.frame(coef(result_summary))
 r_squared <- result_summary$rsquared
 coefficients_table
 
+###############################################################################
+#                     !!!!!AMERICA!!!!!!!!!                                   #
+###############################################################################
+
+
+DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_America.xlsx")
+
+# Remove column with missed variables
+df <- subset(DataGlobal, select = - GlobalPeaceIndex)
