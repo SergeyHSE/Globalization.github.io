@@ -378,3 +378,20 @@ summary(random)
 
 #Choice between RE and FE (Hausman test)
 phtest(fixed, random)
+
+#Time-FE
+fixed.time <- plm(Hungry ~ Export+Gini_coef+GlobalPeaceIndex+Import+TertierySchool+School+SecondarySchool + factor(Year), data=df, index=c("Country_Name", "Year"), model="within")
+summary(fixed.time)
+
+#Choice time-FE and FE
+pFtest(fixed.time, fixed)
+plmtest(fixed, c("time"), type=("bp"))
+
+#Pool
+pool <- plm(Hungry ~ Export+Gini_coef+GlobalPeaceIndex+Import+TertierySchool+School+SecondarySchool,
+            data=df, index=c("Country_Name", "Year"), model="pooling")
+summary(pool)
+pFtest(fixed, pool)
+# Breusch-Pagan Lagrange Multiplier for random effects. Null is no panel effect (i.e. OLS better)
+plmtest(pool, type=c("bp"))
+
