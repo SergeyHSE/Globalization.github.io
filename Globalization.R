@@ -348,3 +348,17 @@ m1 <- pdynmc(
 
 summary(m1)
 
+##########################################################################
+#                      !!!!!!WITH PEACE INDEX!!!!!!!!!!                 ##
+##########################################################################
+
+# AFRICA
+
+
+DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_Africa.xlsx")
+
+df <- DataGlobal
+
+# Replace spaces with underscores
+df <- df %>%
+  rename_all(~gsub(" ", "_", .))
