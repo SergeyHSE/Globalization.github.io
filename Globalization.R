@@ -219,7 +219,7 @@ coefficients_table
 ###############################################################################
 
 
-DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_America.xlsx")
+DataGlobal <- read_excel("Panel_America.xlsx")
 
 # Remove column with missed variables
 df <- subset(DataGlobal, select = - GlobalPeaceIndex)
@@ -355,7 +355,7 @@ summary(m1)
 # AFRICA
 
 
-DataGlobal <- read_excel("C:/Users/User/Documents/книги/ВШЭ/учёба/НИС/data/PanelData/Panel_Africa.xlsx")
+DataGlobal <- read_excel("Panel_Africa.xlsx")
 
 df <- DataGlobal
 
@@ -395,3 +395,12 @@ pFtest(fixed, pool)
 # Breusch-Pagan Lagrange Multiplier for random effects. Null is no panel effect (i.e. OLS better)
 plmtest(pool, type=c("bp"))
 
+#Testing for cross-sectional dependence/contemporaneous correlation: using Breusch-Pagan LM test of independence and Pasaran CD test
+pcdtest(fixed, test=c("lm"))
+pcdtest(fixed, test=c("cd"))
+
+#Testing for serial correlation
+pbgtest(fixed)
+
+#Heteroskedastisity
+bptest(Hungry ~ Export+Gini_coef+Import+GlobalPeaceIndex+TertierySchool+School+SecondarySchool+factor(Country_Name), data=df, studentize=F)
