@@ -305,3 +305,46 @@ result_summary <- summary(ab.model)
 coefficients_table <- as.data.frame(coef(result_summary))
 r_squared <- result_summary$rsquared
 coefficients_table
+
+######################################
+#           pdynmc
+######################################
+
+library(pdynmc)
+
+# Define your model (replace Year with your time variable name if different)
+m1 <- pdynmc(
+  dat = df,
+  varname.i = "Country_Name",
+  varname.t = "Year",
+  use.mc.diff = TRUE,
+  use.mc.lev = FALSE,
+  use.mc.nonlin = FALSE,
+  include.y = TRUE,
+  varname.y = "Hungry",
+  lagTerms.y = 1,
+  fur.con = TRUE,
+  fur.con.diff = TRUE,
+  fur.con.lev = FALSE,
+  varname.reg.fur = c(
+    "Export",
+    "Gini_coef",
+    "Import",
+    "TertierySchool",
+    "School",
+    "SecondarySchool"
+  ),
+  lagTerms.reg.fur = c(0, 0, 0, 0, 0, 1),
+  include.dum = TRUE,
+  dum.diff = TRUE,
+  dum.lev = FALSE,
+  varname.dum = "Year",
+  w.mat = "iid.err",
+  std.err = "dbl.corrected",
+  estimation = "twostep",
+  opt.meth
+  = "none"
+)
+
+summary(m1)
+
