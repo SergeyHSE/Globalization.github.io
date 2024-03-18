@@ -485,3 +485,8 @@ pbgtest(fixed)
 #Heteroskedastisity
 bptest(Hungry ~ Export+Gini_coef+Import+GlobalPeaceIndex+TertierySchool+School+SecondarySchool+factor(Country_Name), data=df, studentize=F)
 
+# Define the model formula
+model_formula <- Hungry ~ Export + Gini_coef + GlobalPeaceIndex + Import + 
+  TertierySchool + School + SecondarySchool + lag(Hungry, 1) + lag(Export, 1) +
+  lag(Import, 1) + lag(Gini_coef, 1) + lag(School, 1) + lag(SecondarySchool, 1) +
+  lag(TertierySchool, 1) + lag(GlobalPeaceIndex, 1)
