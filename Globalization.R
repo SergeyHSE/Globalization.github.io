@@ -469,3 +469,19 @@ plmtest(fixed, c("time"), type=("bp"))
 pool <- plm(Hungry ~ Export+Gini_coef+GlobalPeaceIndex+Import+TertierySchool+School+SecondarySchool,
             data=df, index=c("Country_Name", "Year"), model="pooling")
 
+summary(pool)
+pFtest(fixed, pool)
+# Breusch-Pagan Lagrange Multiplier for random effects. Null is no panel effect (i.e. OLS better)
+plmtest(pool, type=c("bp"))
+
+
+#Testing for cross-sectional dependence/contemporaneous correlation: using Breusch-Pagan LM test of independence and Pasaran CD test
+pcdtest(fixed, test=c("lm"))
+pcdtest(fixed, test=c("cd"))
+
+#Testing for serial correlation
+pbgtest(fixed)
+
+#Heteroskedastisity
+bptest(Hungry ~ Export+Gini_coef+Import+GlobalPeaceIndex+TertierySchool+School+SecondarySchool+factor(Country_Name), data=df, studentize=F)
+
