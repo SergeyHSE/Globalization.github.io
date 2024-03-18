@@ -431,3 +431,17 @@ coefficients_table <- as.data.frame(coef(result_summary))
 r_squared <- result_summary$rsquared
 coefficients_table
 
+# ASIA
+
+DataGlobal <- read_excel("Panel_Asia.xlsx")
+
+df <- DataGlobal
+
+# Replace spaces with underscores
+df <- df %>%
+  rename_all(~gsub(" ", "_", .))
+
+df <- na.omit(df)
+
+df$GlobalPeaceIndex <- (df$GlobalPeaceIndex / 5) * 100
+
