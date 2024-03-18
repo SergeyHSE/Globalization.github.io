@@ -586,3 +586,8 @@ ab.model <- plm(
 summary(ab.model)
 pbgtest(ab.model)
 
+result_summary <- summary(ab.model)
+coefficients_table <- as.data.frame(coef(result_summary))
+r_squared <- result_summary$rsquared
+coefficients_table
+
