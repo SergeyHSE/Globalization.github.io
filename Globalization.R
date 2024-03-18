@@ -525,3 +525,15 @@ df <- na.omit(df)
 
 df$GlobalPeaceIndex <- (df$GlobalPeaceIndex / 5) * 100
 
+#FE
+fixed <- plm(Hungry ~ Export+Gini_coef+GlobalPeaceIndex+Import+TertierySchool+School+SecondarySchool, data=df, index=c("Country_Name", "Year"), model="within")
+summary(fixed)
+
+#RE ("swar")
+random <- plm(Hungry ~ Export+Gini_coef+GlobalPeaceIndex+Import+TertierySchool+School+SecondarySchool,
+              data=df, index=c("Country_Name", "Year"), model = "random", random.method = "walhus")
+summary(random)
+
+#Choice between RE and FE (Hausman test)
+phtest(fixed, random)
+
