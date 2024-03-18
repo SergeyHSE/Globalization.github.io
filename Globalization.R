@@ -571,3 +571,18 @@ model_formula <- Hungry ~ Export + Gini_coef + GlobalPeaceIndex + Import +
   lag(Import, 1) + lag(Gini_coef, 1) + lag(School, 1) + lag(SecondarySchool, 1) +
   lag(TertierySchool, 1) + lag(GlobalPeaceIndex, 1)
 
+# Specify the panel data model with Newey-West standard errors
+ab.model <- plm(
+  formula = model_formula,
+  data = df,
+  model = "within",            
+  #random.method = "walhus",
+  effect = "individual",       
+  vcov = "kernel",             # Newey-West standard errors
+  kernel = "bartlett",         # Bartlett kernel for Newey-West
+  index = c("Country_Name", "Year"),  # Panel index
+)
+
+summary(ab.model)
+pbgtest(ab.model)
+
