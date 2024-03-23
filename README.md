@@ -318,7 +318,8 @@ lag(SecondarySchool, 1) и lag(TertierySchool, 1) (положительные и
 
 # Appedix
 
-Африка
+**Африка
+
 1.
 ![image](https://github.com/SergeyHSE/Globalization.github.io/assets/139458161/4c648409-a60e-454b-a246-bd644bb6e32a)
 
