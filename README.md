@@ -291,3 +291,28 @@ lag(SecondarySchool, 1) и lag(TertierySchool, 1) (положительные и
 •	Оказывать помощь странам в реализации программ по борьбе с бедностью и голодом.
 •	Поддерживать исследования в области влияния глобализации на бедность и голод.
 
+# References
+
+1.	Nayyar, D. (2019). Globalization in Historical Perspective. In: Nissanke, M., Ocampo, J.A. (eds) The Palgrave Handbook of Development Economics. Palgrave Macmillan, Cham. https://doi.org/10.1007/978-3-030-14000-7_19 
+2.	World Bank. (2020). World Development Report 2020: Trading for Development in a Time of Global Disruption. https://www.worldbank.org/en/publication/wdr2020 
+3.	National Bureau of Economic Research. (2007, August). Globalization and Poverty. https://www.nber.org/books-and-chapters/globalization-and-poverty
+4.	Food and Agriculture Organization of the United Nations. (n.d.). Globalization of food systems in developing countries: impact on food security and nutrition. https://www.fao.org/documents/card/es?details=25f0d49b-c900-5879-9cdf-ffbaa70ce6e3/
+5.	Agunyai, S.C.; Amusan, L. Implications of Land Grabbing and Resource Curse for Sustainable Development Goal 2 in Africa: Can Globalization Be Blamed? Sustainability 2023, 15, 10845. https://doi.org/10.3390/su151410845 
+6.	Oosterveer, P., & Sonnenfeld, D.A. (2011). Food, Globalization and Sustainability (1st ed.). Routledge. https://doi.org/10.4324/9781849776790 
+7.	Kennedy, Gina, Guy Nantel, and Prakash Shetty. "Globalization of food systems in developing countries: a synthesis of country case studies." Globalization of food systems in developing countries: impact on food security and nutrition 83.1 (2004) https://www.researchgate.net/profile/Barry-Popkin/publication/5021665_Globalization_Urbanization_and_Nutritional_Change_in_the_Developing_World/links/54c7b3990cf22d626a36e21e/Globalization-Urbanization-and-Nutritional-Change-in-the-Developing-World.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D#page=10
+8.	Wagle, Udaya R. "Are economic liberalization and equality compatible? Evidence from South Asia." World Development 35.11 (2007): 1836-1857. https://www.sciencedirect.com/science/article/pii/S0305750X07001350?via%3Dihub 
+9.	Panayotou, Theodore. “Globalization and Environment.” CID Working Paper Series 2000.53, Harvard University, Cambridge, MA, July 2000. https://dash.harvard.edu/handle/1/39569837 
+10.	Qu, Z. (2022). The Impact of Globalization on Food Crises and Endemic Hunger. BCP Business & Management, 20, 303-307. https://doi.org/10.54691/bcpbm.v20i.982 
+11.	Clapp, Jennifer. “WORLD HUNGER AND THE GLOBAL ECONOMY: STRONG LINKAGES, WEAK ACTION.” Journal of International Affairs, vol. 67, no. 2, 2014, pp. 1–17. JSTOR, http://www.jstor.org/stable/24461732. Accessed 6 Mar. 2024. 
+12.	Ojo, A.S. Globalization and Agricultural Productivity Paradigm: The Nigeria Perspective. Arch. Bus. Res. 2018, 6, 94–104. https://doi.org/10.14738/abr.61.4022 
+13.	Amusan, L. “Reap what you have not Sown”, “Architect of Poverty”: The Political Economy of Biodiversity Patenting in Africa. Anthropologist 2018, 31, 25–33. https://d1wqtxts1xzle7.cloudfront.net/109093353/Lere_Amusan_Reap_What_you_Have_not_Sown-libre.pdf?1702792036=&response-content-disposition=inline%3B+filename%3DReap_What_You_Have_not_Sown_Architect_o.pdf&Expires=1709713359&Signature=Y-Tz9L-qmHaEhmqvbyqrNFHETKlfz09wjYRTAo5GvSxve5WzXlN4ao1stA~75xluWEjeqkxv0EHN4qlEIFXk8ByYdl09ghyFXqXO~GS5TRVVxGQyoTKb5huAgULyYQ4NEo6ZHQfHnP5~rL4xquFCzn3i48Z6rnZHPLKG2QQXJ9KnemGsQKba3VrK~qzdm5PrKT6aLu5R4Qb3OiK4Y7jEC7t7rGdoE5eUmhSZMJmskY~cOqBUIP9lUX9uual~uReqTIw75r57Y8msgxNQ8NpRNyo1vB4bAUs7M54eZN4AxhpTHU30d2knTuF9uAiFeeZw-knAW14QG7ksp-Xmh4tAUA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA 
+14.	World Food Program. The biggest drivers of hunger. https://www.wfpusa.org/drivers-of-hunger/ 
+15.	United Nations Office for the Coordination of Humanitarian Affairs. Top Causes of Global Poverty https://reliefweb.int/report/world/11-top-causes-global-poverty 
+16.	World Bank. Metadata Glossary. https://databank.worldbank.org/metadataglossary/jobs/series/TX.VAL.MRCH.XD.WD 
+17.	World Bank. Metadata Glossary. https://databank.worldbank.org/metadataglossary/world-development-indicators/series/TM.VAL.MRCH.XD.WD 
+18.	World Bank. Metadata Glossary. https://databank.worldbank.org/metadataglossary/jobs/series/SE.PRM.ENRR 
+19.	World Bank. Metadata Glossary. https://databank.worldbank.org/metadataglossary/world-development-indicators/series/SE.SEC.ENRR 
+20.	World Bank. Metadata Glossary. https://databank.worldbank.org/metadataglossary/world-development-indicators/series/SE.TER.ENRR 
+21.	Institute for Economics & Peace (IEP). Map. https://www.visionofhumanity.org/maps/#/ 
+22.	Vision Of Humanity. The Global Peace Index: Exploring the 23 Indicators of Peace. https://www.visionofhumanity.org/chart-of-the-week-indicators-of-peace/ 
+
